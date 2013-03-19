@@ -1,4 +1,4 @@
- Parallel FLASH Dumper (v0.2 20101015)
+ Parallel FLASH Dumper (v0.2.1 20130319)
  There are many commercial FLASH memory programmers but their out of box 
  support for different FLASH chips can be a problem, or I should say 
  some FLASH chips just are not supported.  The meaning of "Parallel" in
@@ -32,10 +32,11 @@
  2. Open serial terminal with baud rate 230400. Data will be 
     dumped in raw binary form over serial and might take a 
     couple hours. 
-    Example using `screen`:
-      screen -l /dev/ttysUSB0 230400 > flashdump.raw
+    Example dump from console (unix/linux):
+      stty -f /dev/tty.usb* 230400; cat /dev/cu.usb* > dump
+    This will dump raw data to dump
     To monitor progres open in tail through a hex editor:
-      tail -f flashdump.raw | xxd
+      tail -f dump | xxd
     You can also put some LED's on the address lines for visual
     status.
   
@@ -53,6 +54,8 @@
  I tried to speed things up by using a SD card but this turned out
  to be slower than serial actually.  Perhaps there are ways to
  improve such a setup though.
+ About serial throughput issues on Arduino:
+ http://www.arduino.cc/cgi-bin/yabb2/YaBB.pl?num=1281611592/0
 
  TROUBLESHOOTING:
  Various issues and solutions I've run into
@@ -89,4 +92,4 @@
    might be an issue.
    
    
- This code is public domain, abuse as you wish and at your own risk
+ This code is public domain, [ab]use as you wish and at your own risk
