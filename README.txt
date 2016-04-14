@@ -1,4 +1,4 @@
- Parallel FLASH Dumper (v0.2.1 20130319)
+ Parallel FLASH Dumper (v0.2.2 20160414)
  There are many commercial FLASH memory programmers but their out of box 
  support for different FLASH chips can be a problem, or I should say 
  some FLASH chips just are not supported.  The meaning of "Parallel" in
@@ -42,6 +42,7 @@
   
  AUTHORS & CODE BRANCHES:
  cyphunk  http://github.com/cyphunk/ParallelFLASHDumper
+ gina hortenbach contributed the raspberry pi version
  
  DEVELOPER NOTES:
  In the future with write support SFI could be used.  U-boot can 
